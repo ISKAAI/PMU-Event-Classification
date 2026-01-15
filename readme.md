@@ -1,14 +1,20 @@
-# PMU Event Classification (ECE 2783 Final)
-This repository contains the final project for ECE 2783: PMU-based power system event classification.
+# PMU Event Classification with RNN
 
-## Files
-- `final.ipynb` – Main Jupyter notebook containing data loading, preprocessing, model training, and evaluation.
-- `Bus39_Competition Data.xlsx` – PMU dataset used in this project.
+## Overview
+Time-series classification of PMU data from IEEE 39-bus system using a 2-layer RNN.
 
-## How to Run
-1. Open `final.ipynb`.
-2. Make sure `Bus39_Competition Data.xlsx` is in the same directory.
-3. Run all cells from top to bottom.
+## Dataset
+Bus39 Competition PMU dataset (14 features, 6 event classes).
+
+## Method
+- Sliding window (sequence length = 10)
+- 2-layer Vanilla RNN (hidden size = 32)
+- Dropout + L2 regularization
+- Cross-entropy loss, Adam optimizer
+
+## Results
+- Test accuracy: 99.78%
+- Confusion matrix and F1-score analysis
 
 ## Requirements
 - Python 3
